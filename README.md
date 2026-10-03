@@ -1,13 +1,13 @@
 <div align="center">
 
-# 📄 Resume Builder (ATS & Humanized Engineering)
+# 📄 ATS Resume Architect (Engineering & Audit Engine)
 
 **An evidence-backed Agent Skill that crafts, humanizes, and audits technical resumes.**  
 *Combines modern ATS semantic search realities, recruiter F-pattern scan rules, and structural debiasing to eliminate AI tells.*
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![skills.sh](https://skills.sh/b/prathameshlonare/resume-builder)](https://skills.sh/prathameshlonare/resume-builder)
-[![Tests](https://github.com/prathameshlonare/resume-builder/actions/workflows/test.yml/badge.svg)](https://github.com/prathameshlonare/resume-builder/actions/workflows/test.yml)
+[![skills.sh](https://skills.sh/b/prathameshlonare/ats-resume-architect)](https://skills.sh/prathameshlonare/ats-resume-architect)
+[![Tests](https://github.com/prathameshlonare/ats-resume-architect/actions/workflows/test.yml/badge.svg)](https://github.com/prathameshlonare/ats-resume-architect/actions/workflows/test.yml)
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python&logoColor=white)](scripts/validate_bullets.py)
 [![Agent Skill](https://img.shields.io/badge/Agent%20Skill-Anthropic%20%7C%20Antigravity-purple)](SKILL.md)
 [![Zero Dependencies](https://img.shields.io/badge/Dependencies-Standard%20Library%20Only-green)](scripts/validate_bullets.py)
@@ -43,21 +43,21 @@ Choose your environment:
 
 Install directly into your global agent environment:
 ```bash
-npx skills add prathameshlonare/resume-builder
+npx skills add prathameshlonare/ats-resume-architect
 ```
 
 Or install manually via Git:
 ```bash
 # Global Agent Skills store
-git clone https://github.com/prathameshlonare/resume-builder.git ~/.agents/skills/resume-builder
+git clone https://github.com/prathameshlonare/ats-resume-architect.git ~/.agents/skills/ats-resume-architect
 
 # Or directly in your workspace
-git clone https://github.com/prathameshlonare/resume-builder.git .agents/skills/resume-builder
+git clone https://github.com/prathameshlonare/ats-resume-architect.git .agents/skills/ats-resume-architect
 ```
 
 **Try without installing (Vercel Skills CLI):**
 ```bash
-npx skills use prathameshlonare/resume-builder --agent claude-code
+npx skills use prathameshlonare/ats-resume-architect --agent claude-code
 ```
 </details>
 
@@ -70,7 +70,7 @@ npx skills use prathameshlonare/resume-builder --agent claude-code
 1. Open **ChatGPT**, **Claude.ai**, or **Gemini** in your browser.
 2. Copy and paste this prompt, then append your resume text:
    ```text
-   Act as a senior technical recruiter and enterprise ATS auditor using the 4-axis framework from the resume-builder repository:
+   Act as a senior technical recruiter and enterprise ATS auditor using the 4-axis framework from the ats-resume-architect repository:
    1. ATS Mechanical Parsing (single column, clean ASCII, no em-dashes, no tables/textboxes)
    2. Semantic Match (cross-reference against 2026 roles: Cloud/DevOps, AI/GenAI, Data, or Backend)
    3. Recruiter F-Pattern Scan (every bullet must have tool + action + quantified metric)
@@ -86,7 +86,7 @@ npx skills use prathameshlonare/resume-builder --agent claude-code
 1. Open ChatGPT or Claude.ai.
 2. Paste this prompt:
    ```text
-   I am a college fresher with no resume yet. Interview me step-by-step using the intake protocol from resume-builder:
+   I am a college fresher with no resume yet. Interview me step-by-step using the intake protocol from ats-resume-architect:
    - Ask me one question at a time about my target role, projects, and tech stack.
    - Dig into my actual codebase/projects to find real metrics (Docker sizes, lines of code, test counts, API latencies) instead of guessing.
    - Do NOT draft anything until you have gathered all my facts.
@@ -111,8 +111,8 @@ If you have **ChatGPT Plus** or any AI with sandbox code execution:
 Run the zero-dependency Python linter on your laptop:
 ```bash
 # Clone the repository
-git clone https://github.com/prathameshlonare/resume-builder.git
-cd resume-builder
+git clone https://github.com/prathameshlonare/ats-resume-architect.git
+cd ats-resume-architect
 
 # Write the bullet to a file (e.g. `bullet.txt`) and run:
 python scripts/validate_bullets.py --file bullet.txt
@@ -145,7 +145,7 @@ When job seekers ask generic LLMs (ChatGPT, Claude, Gemini) to write or polish t
 
 ## 🏗️ Architecture & How It Works
 
-`resume-builder` operates as a dual-flow system governed by a shared standards layer:
+`ats-resume-architect` operates as a dual-flow system governed by a shared standards layer:
 
 ```mermaid
 flowchart TD
@@ -249,14 +249,14 @@ When technical candidates don't know what metrics to provide, the skill extracts
 | :--- | :--- | :--- |
 | **Raw Candidate Input** | *"I used Docker and GitHub actions for CI/CD in my voting system project."* | Honest, but lacks scope, ownership, and measurable impact. |
 | **Standard AI Output** *(ChatGPT / Claude)* | *"Leveraging Docker and GitHub Actions, spearheaded the implementation of modern CI/CD pipelines, facilitating seamless automated testing and enhancing overall operational efficiency."* | ❌ Participial opener (`Leveraging`)<br>❌ 3 Banned tell words (`spearheaded`, `facilitating`, `seamless`)<br>❌ Participial tail fluff (`enhancing efficiency`)<br>❌ Zero concrete metrics |
-| **`resume-builder` Output** *(Grounded + Humanized)* | *"Built automated GitHub Actions CI/CD pipeline running Bandit SAST and 34 unit tests, cutting Docker image size from 350MB to 25MB using a multi-stage `node:22-alpine` to `nginx:alpine` build."* | ✅ Direct active verb (`Built`)<br>✅ Exact technical entities (`Bandit SAST`, `nginx:alpine`)<br>✅ Concrete baseline vs. outcome (`350MB to 25MB`)<br>✅ **Score: 7/7 on validate_bullets.py** |
+| **`ats-resume-architect` Output** *(Grounded + Humanized)* | *"Built automated GitHub Actions CI/CD pipeline running Bandit SAST and 34 unit tests, cutting Docker image size from 350MB to 25MB using a multi-stage `node:22-alpine` to `nginx:alpine` build."* | ✅ Direct active verb (`Built`)<br>✅ Exact technical entities (`Bandit SAST`, `nginx:alpine`)<br>✅ Concrete baseline vs. outcome (`350MB to 25MB`)<br>✅ **Score: 7/7 on validate_bullets.py** |
 
 ---
 
 ## 📁 Repository Structure
 
 ```
-resume-builder/
+ats-resume-architect/
 ├── SKILL.md                             # Main router & agent instructions (<50 lines)
 ├── LICENSE                              # MIT License
 ├── README.md                            # Complete documentation & usage guide

@@ -1,25 +1,26 @@
 ---
-name: resume-builder
-description: Builds a resume from scratch by intake, or audits an existing resume/CV against four systems — ATS keyword/parsing engines, semantic search, recruiter skimming, and AI-writing credibility risk against a target role or JD. Produces severity-coded findings, gap analysis, bullet rewrites, and estimate match scores for audits; or a full drafted resume for generation. Use when a user wants a resume/CV built from scratch, or uploads/shares an existing resume for feedback, ATS checks, 'will this pass' reviews, JD matching, recruiter critique, resume comparisons, or to sound 'less AI' / 'more human'. Also trigger when interpreting results from third-party resume tools (Jobscan, Rezi, Zety, Teal, JobGPT, resumeheatmap) — audits independently without trusting external scores.
+name: ats-resume-architect
+description: Builds an ATS-optimized technical resume from scratch by intake, or audits an existing resume/CV against four systems — mechanical ATS parsing, semantic search matching, recruiter F-pattern skimming, and AI-tell credibility debiasing against a target role or JD. Produces severity-coded findings, gap analysis, bullet rewrites, and estimate match scores for audits; or a full drafted resume for generation. Use when a user wants a resume/CV architected from scratch, or uploads/shares an existing resume for feedback, ATS checks, 'will this pass' reviews, JD matching, recruiter critique, resume comparisons, or to sound 'less AI' / 'more human'. Also trigger when interpreting results from third-party resume tools (Jobscan, Rezi, Zety, Teal, JobGPT, resumeheatmap) — audits independently without trusting external scores.
 metadata:
-  version: 1.3.1
+  version: 1.0.0
   tags:
-    - resume
-    - cv
-    - ats
-    - career
-    - job-search
-    - audit
-    - generator
+    - ats-resume
+    - resume-architect
+    - cv-builder
+    - ats-checker
+    - career-engineering
+    - resume-audit
+    - bullet-validator
   keywords:
-    - resume builder
-    - cv builder
-    - ats checker
+    - ats resume architect
+    - ats resume
+    - resume architect
     - resume audit
-    - career advice
+    - ats checker
+    - technical resume
 ---
 
-# Resume Builder
+# ATS Resume Architect
 
 One skill, two flows sharing a common standards layer. Route first, then hand off — don't inline flow logic here.
 

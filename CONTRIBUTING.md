@@ -1,6 +1,6 @@
-# Contributing to Resume Builder
+# Contributing to ATS Resume Architect
 
-Thank you for your interest in contributing to `resume-builder`! 
+Thank you for your interest in contributing to `ats-resume-architect`! 
 
 This project aims to help engineers transition away from generic, buzzword-heavy AI resumes and build **unassailable, evidence-backed resumes** grounded in verifiable codebase metrics and clean engineering phrasing.
 
@@ -52,8 +52,8 @@ You can contribute new quality gates or pattern matches:
 
 ### 1. Fork & Clone
 ```bash
-git clone https://github.com/<your-username>/resume-builder.git
-cd resume-builder
+git clone https://github.com/<your-username>/ats-resume-architect.git
+cd ats-resume-architect
 ```
 
 ### 2. Create a Feature Branch
